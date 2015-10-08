@@ -101,8 +101,15 @@
                                     <navigationItem title="Add Favorite" id="Zou-7D-ppi">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NK5-l1-7nq">
                                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="bTd-oP-i9n" id="dSO-Tp-FZ7"/>
+                                            </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3tL-ov-BDz"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3tL-ov-BDz">
+                                            <connections>
+                                                <action selector="doneTapped:" destination="bTd-oP-i9n" id="zOQ-5h-t2G"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -138,6 +145,10 @@
                             <constraint firstItem="x9z-Zf-2E5" firstAttribute="top" secondItem="12L-47-jzH" secondAttribute="bottom" id="tuH-1W-puY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="12L-47-jzH" id="iE7-38-Xx7"/>
+                        <outlet property="nameField" destination="6t5-po-Jz5" id="rvR-MA-fx5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QjT-bY-URi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
