@@ -49,8 +49,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             sampleFavorite.name      = "Kremlin"
             sampleFavorite.lat       = 55.752023
             sampleFavorite.long      = 37.617499
-            sampleFavorite.latDelta  = 3
-            sampleFavorite.longDelta = 3
+            sampleFavorite.latDelta  = 0.003
+            sampleFavorite.longDelta = 0.003
         
         do {
             try context.save()
