@@ -25,6 +25,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func viewWillAppear(animated: Bool) {
+        createSampleFavorite()
+        
         let request = NSFetchRequest(entityName: "Favorite")
         
         var results : [AnyObject]?
@@ -40,6 +42,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         self.tableView.reloadData()
+    }
+    
+    func createSampleFavorite() {
+        let sampleFavorite = NSEntityDescription.insertNewObjectForEntityForName("Favorite", inManagedObjectContext: self.context) as! Favorite
+            sampleFavorite.name      = "Kremlin"
+            sampleFavorite.lat       = 55.752023
+            sampleFavorite.long      = 37.617499
+            sampleFavorite.latDelta  = 3
+            sampleFavorite.longDelta = 3
+        
+        do {
+            try context.save()
+        } catch {}
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
