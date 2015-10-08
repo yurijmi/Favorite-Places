@@ -15,10 +15,13 @@ class AddFavoriteViewController: UIViewController {
     @IBOutlet weak var nameField : UITextField!
     @IBOutlet weak var mapView   : MKMapView!
     
+    var locationManager : CLLocationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        self.locationManager = CLLocationManager()
+        self.locationManager!.requestWhenInUseAuthorization()
     }
     
     @IBAction func cancelTapped(sender: AnyObject) {
