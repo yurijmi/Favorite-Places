@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func viewWillAppear(animated: Bool) {
-        createSampleFavorite()
+        // createSampleFavorite()
         
         let request = NSFetchRequest(entityName: "Favorite")
         
