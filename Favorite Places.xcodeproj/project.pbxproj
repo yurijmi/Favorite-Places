@@ -16,6 +16,7 @@
 		509E37C31BC61089003F97AD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509E37C21BC61089003F97AD /* MapKit.framework */; };
 		509E37C61BC616BC003F97AD /* Favorite+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E37C41BC616BC003F97AD /* Favorite+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
 		509E37C71BC616BC003F97AD /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E37C51BC616BC003F97AD /* Favorite.swift */; settings = {ASSET_TAGS = (); }; };
+		509E37C91BC61768003F97AD /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509E37C81BC61768003F97AD /* MapTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		509E37C21BC61089003F97AD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		509E37C41BC616BC003F97AD /* Favorite+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorite+CoreDataProperties.swift"; path = "../Favorite+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		509E37C51BC616BC003F97AD /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = ../Favorite.swift; sourceTree = "<group>"; };
+		509E37C81BC61768003F97AD /* MapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				509E37AD1BC60DF7003F97AD /* AppDelegate.swift */,
 				509E37AF1BC60DF7003F97AD /* ViewController.swift */,
+				509E37C81BC61768003F97AD /* MapTableViewCell.swift */,
 				509E37C41BC616BC003F97AD /* Favorite+CoreDataProperties.swift */,
 				509E37C51BC616BC003F97AD /* Favorite.swift */,
 				509E37B11BC60DF7003F97AD /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			files = (
 				509E37C71BC616BC003F97AD /* Favorite.swift in Sources */,
 				509E37B01BC60DF7003F97AD /* ViewController.swift in Sources */,
+				509E37C91BC61768003F97AD /* MapTableViewCell.swift in Sources */,
 				509E37C61BC616BC003F97AD /* Favorite+CoreDataProperties.swift in Sources */,
 				509E37B61BC60DF7003F97AD /* Favorite_Places.xcdatamodeld in Sources */,
 				509E37AE1BC60DF7003F97AD /* AppDelegate.swift in Sources */,

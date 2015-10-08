@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapCell" rowHeight="150" id="aPo-Zd-28H">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapCell" rowHeight="150" id="aPo-Zd-28H" customClass="MapTableViewCell" customModule="Favorite_Places" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="600" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aPo-Zd-28H" id="iUl-oF-Hy3">
@@ -49,6 +49,10 @@
                                                 <constraint firstAttribute="bottom" secondItem="MEd-eh-uih" secondAttribute="bottom" id="rFv-Zw-jWx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapView" destination="MEd-eh-uih" id="lSw-gl-Bh2"/>
+                                            <outlet property="nameLabel" destination="ksS-h0-cNy" id="iHe-EF-M8P"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
