@@ -66,7 +66,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My Favorite Places" id="LD8-kB-gBR">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8M-jY-HdS"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8M-jY-HdS">
+                            <connections>
+                                <segue destination="bTd-oP-i9n" kind="presentation" id="gFF-w6-csl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="boB-lD-O8e" id="qcd-88-5cQ"/>
@@ -75,6 +79,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1377" y="439"/>
+        </scene>
+        <!--Add Favorite View Controller-->
+        <scene sceneID="chk-XW-pnV">
+            <objects>
+                <viewController id="bTd-oP-i9n" customClass="AddFavoriteViewController" customModule="Favorite_Places" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pZe-Ud-TNd"/>
+                        <viewControllerLayoutGuide type="bottom" id="x9z-Zf-2E5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1zN-Ct-djs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfV-vV-jbO">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="rt4-bk-K3k"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Add Favorite" id="Zou-7D-ppi">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NK5-l1-7nq">
+                                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="3tL-ov-BDz"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ib4-Qe-3Rk">
+                                <rect key="frame" x="20" y="84" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yosemite National Park" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6t5-po-Jz5">
+                                <rect key="frame" x="20" y="125" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="12L-47-jzH">
+                                <rect key="frame" x="0.0" y="175" width="600" height="425"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ib4-Qe-3Rk" firstAttribute="top" secondItem="XfV-vV-jbO" secondAttribute="bottom" constant="20" id="E5B-ez-ALX"/>
+                            <constraint firstItem="6t5-po-Jz5" firstAttribute="leading" secondItem="1zN-Ct-djs" secondAttribute="leading" constant="20" id="EXG-KA-77V"/>
+                            <constraint firstItem="12L-47-jzH" firstAttribute="top" secondItem="6t5-po-Jz5" secondAttribute="bottom" constant="20" id="Hft-bK-uFP"/>
+                            <constraint firstAttribute="trailing" secondItem="XfV-vV-jbO" secondAttribute="trailing" id="JCg-C7-EkK"/>
+                            <constraint firstAttribute="trailing" secondItem="ib4-Qe-3Rk" secondAttribute="trailing" constant="20" id="PT9-Ly-soZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6t5-po-Jz5" secondAttribute="trailing" constant="20" id="Re8-Sx-gLq"/>
+                            <constraint firstItem="XfV-vV-jbO" firstAttribute="top" secondItem="1zN-Ct-djs" secondAttribute="top" id="SVA-cs-jo6"/>
+                            <constraint firstItem="12L-47-jzH" firstAttribute="leading" secondItem="1zN-Ct-djs" secondAttribute="leading" id="Sc1-ai-jwo"/>
+                            <constraint firstItem="ib4-Qe-3Rk" firstAttribute="leading" secondItem="1zN-Ct-djs" secondAttribute="leading" constant="20" id="cb3-Ca-tbg"/>
+                            <constraint firstItem="XfV-vV-jbO" firstAttribute="leading" secondItem="1zN-Ct-djs" secondAttribute="leading" id="kzo-Oz-5ZW"/>
+                            <constraint firstAttribute="trailing" secondItem="12L-47-jzH" secondAttribute="trailing" id="lK4-CU-DUa"/>
+                            <constraint firstItem="6t5-po-Jz5" firstAttribute="top" secondItem="ib4-Qe-3Rk" secondAttribute="bottom" constant="20" id="oFP-Lc-FBf"/>
+                            <constraint firstItem="x9z-Zf-2E5" firstAttribute="top" secondItem="12L-47-jzH" secondAttribute="bottom" id="tuH-1W-puY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjT-bY-URi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2065" y="439"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8ar-eI-qZI">
