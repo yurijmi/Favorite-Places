@@ -68,6 +68,9 @@
                     <navigationItem key="navigationItem" title="My Favorite Places" id="LD8-kB-gBR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8M-jY-HdS"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="boB-lD-O8e" id="qcd-88-5cQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
