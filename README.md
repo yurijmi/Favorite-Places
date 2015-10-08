@@ -1,4 +1,4 @@
-# Favorite-Places
+# Favorite Places
 8th app of Nick's and Jenna's iOS 9 course
 
 Build target: iOS 8.0, iPhone only
