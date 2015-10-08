@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lHw-v6-BB1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Favorite Places-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Favorite_Places" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,75 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="boB-lD-O8e">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="aPo-Zd-28H">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aPo-Zd-28H" id="iUl-oF-Hy3">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksS-h0-cNy">
+                                                    <rect key="frame" x="18" y="0.0" width="564" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MEd-eh-uih">
+                                                    <rect key="frame" x="0.0" y="23" width="600" height="126"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ksS-h0-cNy" firstAttribute="top" secondItem="iUl-oF-Hy3" secondAttribute="top" id="025-C6-EUA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ksS-h0-cNy" secondAttribute="trailing" constant="10" id="5gx-a6-LWu"/>
+                                                <constraint firstItem="MEd-eh-uih" firstAttribute="top" secondItem="ksS-h0-cNy" secondAttribute="bottom" constant="2" id="Dtf-UK-24f"/>
+                                                <constraint firstItem="ksS-h0-cNy" firstAttribute="leading" secondItem="iUl-oF-Hy3" secondAttribute="leadingMargin" constant="10" id="XWz-D5-6IX"/>
+                                                <constraint firstItem="MEd-eh-uih" firstAttribute="leading" secondItem="iUl-oF-Hy3" secondAttribute="leading" id="Xzj-1M-c0e"/>
+                                                <constraint firstAttribute="trailing" secondItem="MEd-eh-uih" secondAttribute="trailing" id="pD2-8N-nps"/>
+                                                <constraint firstAttribute="bottom" secondItem="MEd-eh-uih" secondAttribute="bottom" id="rFv-Zw-jWx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="boB-lD-O8e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-64" id="F2v-3V-Szf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="boB-lD-O8e" secondAttribute="bottom" id="GWa-Zm-fni"/>
+                            <constraint firstItem="boB-lD-O8e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rdh-eb-YY4"/>
+                            <constraint firstAttribute="trailing" secondItem="boB-lD-O8e" secondAttribute="trailing" id="fuX-Fr-KAw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Favorite Places" id="LD8-kB-gBR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Q8M-jY-HdS"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1377" y="439"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8ar-eI-qZI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lHw-v6-BB1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="27u-JX-5Pw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fVr-hM-iN6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLd-VR-UYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="709" y="439"/>
         </scene>
     </scenes>
 </document>
