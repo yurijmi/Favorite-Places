@@ -10,18 +10,32 @@ import UIKit
 import MapKit
 import CoreData
 
-class AddFavoriteViewController: UIViewController {
+class AddFavoriteViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var nameField : UITextField!
     @IBOutlet weak var mapView   : MKMapView!
     
     var locationManager : CLLocationManager?
+    var gotLocation = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.locationManager = CLLocationManager()
         self.locationManager!.requestWhenInUseAuthorization()
+        
+        self.locationManager!.delegate = self
+        self.locationManager!.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if self.gotLocation.boolValue == false {
+            let region = MKCoordinateRegionMakeWithDistance(self.locationManager!.location!.coordinate, 1000, 1000)
+            
+            self.mapView.setRegion(region, animated: true)
+            
+            self.gotLocation = true
+        }
     }
     
     @IBAction func cancelTapped(sender: AnyObject) {
